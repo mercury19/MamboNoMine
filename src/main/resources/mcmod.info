@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "mambonomine",
+  "name": "Mambo No. Mine",
+  "description": "A Little Bit of...",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/mercury19/MamboNoMine/wiki",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["mercury19"],
+  "credits": "mercury19 for making the mod, turtywurty on youtube for his modding tutorials",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

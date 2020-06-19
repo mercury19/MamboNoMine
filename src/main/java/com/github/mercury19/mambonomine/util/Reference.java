@@ -7,7 +7,7 @@ public class Reference
 	public static final String MC_VERSION = "[1.12.2]";
 	public static final String NAME = "Mambo No. Mine";
 	
-	public static final String CLIENT_PROXY_CLASS = "com.github,mercury19.mambonomine.proxy.ClientProxy";
+	public static final String CLIENT_PROXY_CLASS = "com.github.mercury19.mambonomine.proxy.ClientProxy";
 	
-	public static final String COMMON_PROXY_CLASS = "com.github,mercury19.mambonomine.proxy.CommonProxy";
+	public static final String COMMON_PROXY_CLASS = "com.github.mercury19.mambonomine.proxy.CommonProxy";
 }

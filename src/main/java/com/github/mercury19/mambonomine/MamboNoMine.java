@@ -1,6 +1,8 @@
 package com.github.mercury19.mambonomine;
 
 import com.github.mercury19.mambonomine.proxy.CommonProxy;
+import com.github.mercury19.mambonomine.recipes.SmeltingRecipes;
+import com.github.mercury19.mambonomine.tabs.MamboNoMineTab;
 import com.github.mercury19.mambonomine.util.Reference;
 
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +24,8 @@ public class MamboNoMine
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
+	public static final MamboNoMineTab MAMBO_TAB = new  MamboNoMineTab();
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -31,7 +35,7 @@ public class MamboNoMine
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+		SmeltingRecipes.init();
 	}
 	
 	@EventHandler
