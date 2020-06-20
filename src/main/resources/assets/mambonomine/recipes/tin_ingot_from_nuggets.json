@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"TTT",
+		"TTT",
+		"TTT"
+	],
+	"key": 
+	{
+		"T": 
+		{
+			"item": "mambonomine:tin_nugget"
+		}
+	},
+	"result": 
+	{
+		"item": "mambonomine:tin_ingot",
+		"count": 1
+	}
+}
