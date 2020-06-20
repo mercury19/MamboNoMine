@@ -125,4 +125,3 @@ build.dependsOn sourcesJar
 artifacts {
 	archives sourcesJar
 }
-
