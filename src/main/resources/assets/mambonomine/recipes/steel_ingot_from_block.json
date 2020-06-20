@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "mambonomine:steel_block"
+		}
+	],
+	"result": 
+	{
+		"item": "mambonomine:steel_ingot",
+		"count": 9
+	}
+}

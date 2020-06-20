@@ -17,5 +17,6 @@ public class BlockInit
 	public static final Block COPPER_ORE = new BlockBase("copper_ore", Material.ROCK);
 	public static final Block TIN_BLOCK = new BlockBase("tin_block", Material.IRON);
 	public static final Block TIN_ORE = new BlockBase("tin_ore", Material.ROCK);
+	public static final Block STEEL_BLOCK = new BlockBase("steel_block", Material.IRON);
 
 }

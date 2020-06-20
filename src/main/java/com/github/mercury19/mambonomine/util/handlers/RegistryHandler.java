@@ -1,9 +1,8 @@
 package com.github.mercury19.mambonomine.util.handlers;
 
+import com.github.mercury19.mambonomine.MamboNoMine;
 import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
-import com.github.mercury19.mambonomine.util.interfaces.IHasModel;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -26,18 +25,12 @@ public class RegistryHandler
     {
         for(Item item : ItemInit.ITEMS)
         {
-            if(item instanceof IHasModel)
-            {
-                ((IHasModel)item).registerModels();
-            }
+            	MamboNoMine.proxy.registerItemRenderer(item, 0, "inventory");
         }
         
         for(Block block : BlockInit.BLOCKS)
         {
-        	if(block instanceof IHasModel)
-        	{
-        		((IHasModel)block).registerModels();
-        	}
+        		MamboNoMine.proxy.registerItemRenderer(Item.getItemFromBlock(block), 0, "inventory");
         }
     }
     
