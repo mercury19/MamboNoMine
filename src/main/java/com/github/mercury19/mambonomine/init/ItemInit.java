@@ -14,5 +14,7 @@ public class ItemInit
 	
 	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
 	public static final Item COPPER_NUGGET = new ItemBase("copper_nugget");
+	public static final Item TIN_INGOT = new ItemBase("tin_ingot");
+	public static final Item TIN_NUGGET = new ItemBase("tin_nugget");
 
 }

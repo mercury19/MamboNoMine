@@ -12,6 +12,7 @@ public class SmeltingRecipes
 	public static void init()
 	{
 		GameRegistry.addSmelting(new ItemStack(BlockInit.COPPER_ORE), new ItemStack(ItemInit.COPPER_INGOT), 0.5f);
+		GameRegistry.addSmelting(new ItemStack(BlockInit.TIN_ORE), new ItemStack(ItemInit.TIN_INGOT), 0.5f);
 	}
 
 }

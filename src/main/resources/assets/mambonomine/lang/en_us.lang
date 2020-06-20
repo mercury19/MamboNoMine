@@ -1,10 +1,14 @@
 // Items
 item.mambonomine.copper_ingot.name=Copper Ingot
 item.mambonomine.copper_nugget.name=Copper Nugget
+item.mambonomine.tin_ingot.name=Tin Ingot
+item.mambonomine.tin_nugget.name=Tin Nugget
 
 // Blocks
 tile.mambonomine.copper_block.name=Copper Block
 tile.mambonomine.copper_ore.name=Copper Ore
+tile.mambonomine.tin_block.name=Tin Block
+tile.mambonomine.tin_ore.name=Tin Ore
 
 // Tabs
 itemGroup.mambonomine=Mambo No. Mine
