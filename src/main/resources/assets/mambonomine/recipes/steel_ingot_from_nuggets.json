@@ -1,13 +1,13 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"SSS",
-		"SSS",
-		"SSS"
+		"NNN",
+		"NNN",
+		"NNN"
 	],
 	"key": 
 	{
-		"S": 
+		"N": 
 		{
 			"item": "mambonomine:steel_nugget"
 		}

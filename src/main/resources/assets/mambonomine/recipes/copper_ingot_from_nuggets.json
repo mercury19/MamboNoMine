@@ -1,13 +1,13 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"CCC",
-		"CCC",
-		"CCC"
+		"NNN",
+		"NNN",
+		"NNN"
 	],
 	"key": 
 	{
-		"C": 
+		"N": 
 		{
 			"item": "mambonomine:copper_nugget"
 		}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "mambonomine:bronze_block"
+		}
+	],
+	"result": 
+	{
+		"item": "mambonomine:bronze_ingot",
+		"count": 9
+	}
+}

@@ -9,12 +9,12 @@
 	{
 		"N": 
 		{
-			"item": "mambonomine:tin_nugget"
+			"item": "mambonomine:bronze_nugget"
 		}
 	},
 	"result": 
 	{
-		"item": "mambonomine:tin_ingot",
+		"item": "mambonomine:bronze_ingot",
 		"count": 1
 	}
 }

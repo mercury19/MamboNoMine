@@ -3,6 +3,7 @@ package com.github.mercury19.mambonomine.world.gen;
 import java.util.Random;
 
 import com.github.mercury19.mambonomine.init.BlockInit;
+import com.github.mercury19.mambonomine.util.handlers.ConfigHandler;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
@@ -26,8 +27,15 @@ public class WorldGenOre implements IWorldGenerator {
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-		generateOre(BlockInit.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 72, random.nextInt(3) + 4, 20);
-		generateOre(BlockInit.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 54, random.nextInt(2) + 3, 10);
+		if (ConfigHandler.COPPER) 
+		{
+			generateOre(BlockInit.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 72, random.nextInt(3) + 4, 20);
+		}
+		
+		if (ConfigHandler.TIN)
+		{
+			generateOre(BlockInit.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 54, random.nextInt(2) + 3, 10);
+		}
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances)

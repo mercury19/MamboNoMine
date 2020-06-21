@@ -1,13 +1,13 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"CCC",
-		"CCC",
-		"CCC"
+		"III",
+		"III",
+		"III"
 	],
 	"key": 
 	{
-		"C": 
+		"I": 
 		{
 			"item": "mambonomine:copper_ingot"
 		}

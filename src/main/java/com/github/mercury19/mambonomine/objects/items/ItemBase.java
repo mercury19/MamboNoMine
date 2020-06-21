@@ -9,13 +9,16 @@ import net.minecraft.item.Item;
 public class ItemBase extends Item
 {
 
-	public ItemBase(String name)
+	public ItemBase(String name, boolean enabled)
 	{
 		setTranslationKey(Reference.MODID + "." + name);
 		setRegistryName(name);
 		setCreativeTab(MamboNoMine.MAMBO_TAB);
 		
-		ItemInit.ITEMS.add(this);
+		if (enabled)
+		{
+			ItemInit.ITEMS.add(this);
+		}
 	}
 
 }

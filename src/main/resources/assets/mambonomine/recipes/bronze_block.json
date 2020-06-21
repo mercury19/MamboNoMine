@@ -1,20 +1,20 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"NNN",
-		"NNN",
-		"NNN"
+		"III",
+		"III",
+		"III"
 	],
 	"key": 
 	{
-		"N": 
+		"I": 
 		{
-			"item": "mambonomine:tin_nugget"
+			"item": "mambonomine:bronze_ingot"
 		}
 	},
 	"result": 
 	{
-		"item": "mambonomine:tin_ingot",
+		"item": "mambonomine:bronze_block",
 		"count": 1
 	}
 }

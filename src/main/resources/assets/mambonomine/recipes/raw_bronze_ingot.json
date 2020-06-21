@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "mambonomine:copper_ingot"
+		},
+
+		{
+			"item": "mambonomine:copper_ingot"
+		},
+
+		{
+			"item": "mambonomine:copper_ingot"
+		},
+		
+		{
+			"item": "mambonomine:tin_ingot"
+		}
+	],
+	"result": 
+	{
+		"item": "mambonomine:raw_bronze_ingot",
+		"count": 4
+	}
+}
