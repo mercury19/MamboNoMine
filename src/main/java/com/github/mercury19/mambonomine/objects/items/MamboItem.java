@@ -5,11 +5,13 @@ import com.github.mercury19.mambonomine.init.ItemInit;
 import com.github.mercury19.mambonomine.util.Reference;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
 
-public class ItemBase extends Item
+public class MamboItem extends Item
 {
+	private String ore;
 
-	public ItemBase(String name, boolean enabled)
+	public MamboItem(String name, String ore, boolean enabled)
 	{
 		setTranslationKey(Reference.MODID + "." + name);
 		setRegistryName(name);
@@ -19,6 +21,11 @@ public class ItemBase extends Item
 		{
 			ItemInit.ITEMS.add(this);
 		}
+	}
+	
+	public void initOreDict()
+	{
+		OreDictionary.registerOre(ore, this);
 	}
 
 }

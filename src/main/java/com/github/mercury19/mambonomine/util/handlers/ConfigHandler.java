@@ -13,10 +13,18 @@ public class ConfigHandler
 {
 	public static Configuration config;
 	
+	// Metals
 	public static boolean COPPER = true;
 	public static boolean TIN = true;
 	public static boolean BRONZE = true;
 	public static boolean STEEL = true;
+	
+	// Stone
+	public static boolean BASALT = true;
+	public static boolean JASPER = true;
+	public static boolean LIMESTONE = true;
+	public static boolean MARBLE = true;
+	public static boolean SLATE = true;
 		
    public static void init(File file)
 	{

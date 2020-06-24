@@ -5,24 +5,20 @@ import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
 import com.github.mercury19.mambonomine.util.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.oredict.OreDictionary;
 
-public class BlockBase extends Block
+public class MamboBlock extends Block
 {
-	public BlockBase(String name, Material material, float hardness, float resistance, float lightlevel, String toolclass, int harvestlevel, SoundType soundtype, boolean enabled)
+	private String ore;
+	
+	public MamboBlock(String name, String ore, Material material, boolean enabled)
 	{
 		super(material);
 		setTranslationKey(Reference.MODID + "." + name);
 		setRegistryName(name);
-		setCreativeTab(MamboNoMine.MAMBO_TAB);
-		setHardness(hardness);
-		setResistance(resistance);
-		setLightLevel(lightlevel);
-		setHarvestLevel(toolclass, harvestlevel);
-		setSoundType(soundtype);
-		
+		setCreativeTab(MamboNoMine.MAMBO_TAB);		
 		
 		if (enabled) 
 		{
@@ -30,6 +26,11 @@ public class BlockBase extends Block
 			ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 		}
 		
+	}
+	
+	public void initOreDict() 
+	{
+		OreDictionary.registerOre(ore, this);
 	}
 	
 }

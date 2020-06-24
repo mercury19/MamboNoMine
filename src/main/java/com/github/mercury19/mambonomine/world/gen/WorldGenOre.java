@@ -27,15 +27,7 @@ public class WorldGenOre implements IWorldGenerator {
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-		if (ConfigHandler.COPPER) 
-		{
-			generateOre(BlockInit.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 72, random.nextInt(3) + 4, 20);
-		}
-		
-		if (ConfigHandler.TIN)
-		{
-			generateOre(BlockInit.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 54, random.nextInt(2) + 3, 10);
-		}
+
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances)
