@@ -7,13 +7,10 @@ import com.github.mercury19.mambonomine.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class MamboBlock extends Block
 {
-	private String ore;
-	
-	public MamboBlock(String name, String ore, Material material, boolean enabled)
+	public MamboBlock(String name, Material material, boolean enabled)
 	{
 		super(material);
 		setTranslationKey(Reference.MODID + "." + name);
@@ -26,11 +23,6 @@ public class MamboBlock extends Block
 			ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 		}
 		
-	}
-	
-	public void initOreDict() 
-	{
-		OreDictionary.registerOre(ore, this);
 	}
 	
 }

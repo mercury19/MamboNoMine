@@ -1,6 +1,6 @@
 package com.github.mercury19.mambonomine.tabs;
 
-import com.github.mercury19.mambonomine.init.ItemInit;
+import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.util.Reference;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -19,7 +19,7 @@ public class MamboNoMineTab extends CreativeTabs
 	@Override
 	public ItemStack createIcon()
 	{
-		return new ItemStack(ItemInit.COPPER_INGOT);
+		return new ItemStack(BlockInit.COPPER_BLOCK);
 	}
 
 }
