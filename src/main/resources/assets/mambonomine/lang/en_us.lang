@@ -1,22 +1,46 @@
 // Items
+item.mambonomine.zinc_ingot.name=Zinc Ingot
+item.mambonomine.zinc_nugget.name=Zinc Nugget
 item.mambonomine.copper_ingot.name=Copper Ingot
 item.mambonomine.copper_nugget.name=Copper Nugget
+item.mambonomine.brass_ingot.name=Brass Ingot
+item.mambonomine.brass_nugget.name=Brass Nugget
 item.mambonomine.tin_ingot.name=Tin Ingot
 item.mambonomine.tin_nugget.name=Tin Nugget
-item.mambonomine.raw_bronze_ingot.name=Raw Bronze Ingot
 item.mambonomine.bronze_ingot.name=Bronze Ingot
 item.mambonomine.bronze_nugget.name=Bronze Nugget
-item.mambonomine.raw_steel_ingot.name=Raw Steel Ingot
 item.mambonomine.steel_ingot.name=Steel Ingot
 item.mambonomine.steel_nugget.name=Steel Nugget
+item.mambonomine.etherium.name=Etherium
+
+// Tools
+item.mambonomine.copper_axe.name=Copper Axe
+item.mambonomine.copper_hoe.name=Copper Hoe
+item.mambonomine.copper_pickaxe.name=Copper Pickaxe
+item.mambonomine.copper_shovel.name=Copper Shovel
+item.mambonomine.copper_sword.name=Copper Sword
+item.mambonomine.bronze_axe.name=Bronze Axe
+item.mambonomine.bronze_hoe.name=Bronze Hoe
+item.mambonomine.bronze_pickaxe.name=Bronze Pickaxe
+item.mambonomine.bronze_shovel.name=Bronze Shovel
+item.mambonomine.bronze_sword.name=Bronze Sword
+item.mambonomine.steel_axe.name=Steel Axe
+item.mambonomine.steel_hoe.name=Steel Hoe
+item.mambonomine.steel_pickaxe.name=Steel Pickaxe
+item.mambonomine.steel_shovel.name=Steel Shovel
+item.mambonomine.steel_sword.name=Steel Sword
 
 // Blocks
+tile.mambonomine.zinc_block.name=Zinc Block
+tile.mambonomine.zinc_ore.name=Zinc Ore
 tile.mambonomine.copper_block.name=Copper Block
 tile.mambonomine.copper_ore.name=Copper Ore
+tile.mambonomine.brass_block=Brass Block
 tile.mambonomine.tin_block.name=Tin Block
 tile.mambonomine.tin_ore.name=Tin Ore
 tile.mambonomine.bronze_block.name=Bronze Block
 tile.mambonomine.steel_block.name=Steel Block
+tile.mambonomine.etherium_ore.name=Etherium Ore
 
 // Tabs
 itemGroup.mambonomine=Mambo No. Mine

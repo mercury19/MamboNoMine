@@ -14,10 +14,13 @@ public class ConfigHandler
 	public static Configuration config;
 	
 	// Metals
+	public static boolean ZINC = true;
 	public static boolean COPPER = true;
 	public static boolean TIN = true;
+	public static boolean BRASS = true;
 	public static boolean BRONZE = true;
 	public static boolean STEEL = true;
+	public static boolean ETHERIUM = true;
 	
 	// Stone
 	public static boolean BASALT = true;
@@ -33,10 +36,13 @@ public class ConfigHandler
 		
 		category = "METALS";
 		config.addCustomCategoryComment(category, "Enable/Disable the various metals added by this mod [default: true]");
+		ZINC = config.getBoolean("Zinc", category, true, null);
 		COPPER = config.getBoolean("Copper", category, true, null);
 		TIN = config.getBoolean("Tin", category, true, null);
+		BRASS = config.getBoolean("Brass", category, true, null);
 		BRONZE = config.getBoolean("Bronze", category, true, null);
 		STEEL = config.getBoolean("Steel", category, true, null);
+		ETHERIUM = config.getBoolean("Etherium", category, true, null);
 		
 		config.save();
 	}

@@ -50,15 +50,16 @@ public class ItemInit
 //	public static final Item LOW_CATALYST = new MamboItem("low_catalyst", true);
 //	public static final Item MED_CATALYST = new MamboItem("med_catalyst", true);
 //	public static final Item HIGH_CATALYST = new MamboItem("high_catalyst", true);
+	public static final Item ETHERIUM = new MamboItem("etherium", ConfigHandler.ETHERIUM);
 	
 	// Metal Base Items
-//	public static final MamboMetal ZINC = new MamboMetal("zinc", true);
+	public static final MamboMetal ZINC = new MamboMetal("zinc", null, null, ConfigHandler.ZINC);
 	public static final MamboMetal COPPER = new MamboMetal("copper", TOOL_COPPER, ARMOR_COPPER, ConfigHandler.COPPER);
 	public static final MamboMetal TIN = new MamboMetal("tin", null, null, ConfigHandler.TIN);
 //	public static final MamboMetal SILVER = new MamboMetal("silver", TOOL_SILVER, ARMOR_SILVER, true);
 //	public static final MamboMetal ETHERIUM = new MamboMetal("etherium", true);
-//	
-//	public static final MamboMetal BRASS = new MamboMetal("brass", true);	
+	
+	public static final MamboMetal BRASS = new MamboMetal("brass", null, null, ConfigHandler.BRASS);	
 	public static final MamboMetal BRONZE = new MamboMetal("bronze", TOOL_BRONZE, ARMOR_BRONZE, ConfigHandler.BRONZE);
 	public static final MamboMetal STEEL = new MamboMetal("steel", TOOL_STEEL, ARMOR_STEEL, ConfigHandler.STEEL);
 	

@@ -3,6 +3,7 @@ package com.github.mercury19.mambonomine.util.handlers;
 import com.github.mercury19.mambonomine.MamboNoMine;
 import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
+import com.github.mercury19.mambonomine.init.OreDictInit;
 import com.github.mercury19.mambonomine.recipes.SmeltingRecipes;
 import com.github.mercury19.mambonomine.world.gen.WorldGenOre;
 
@@ -56,6 +57,7 @@ public class RegistryHandler
     public static void initRegistries()
     {
     	SmeltingRecipes.init();
+    	OreDictInit.registerOres();
     }
    
     public static void postInitRegistries()

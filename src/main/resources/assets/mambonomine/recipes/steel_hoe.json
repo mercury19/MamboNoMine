@@ -1,0 +1,21 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"II",
+		" S",
+		" S"
+	],
+	"key": {
+		"I": {
+			"item": "mambonomine:steel_ingot"
+		},
+		"S": {
+			"type": "forge:ore_dict",
+			"ore": "stickWood"
+		}
+	},
+	"result": {
+		"item": "mambonomine:steel_hoe",
+		"count":1
+	}
+}

@@ -1,13 +1,13 @@
 package com.github.mercury19.mambonomine.objects.blocks;
 
+import com.github.mercury19.mambonomine.init.OreDictInit;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraftforge.oredict.OreDictionary;
+import net.minecraft.item.ItemBlock;
 
 public class MamboOre extends MamboBlock
 {
-	private String ore;
-	
 	public MamboOre(String name, String ore, int level, boolean enabled)
 	{
 		
@@ -17,11 +17,10 @@ public class MamboOre extends MamboBlock
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", level);
 		
+		if (enabled)
+		{
+			OreDictInit.ORES.add(ore);
+			OreDictInit.ORE_NAMES.add(new ItemBlock(this));
+		}
 	}
-	
-	public void initOreDict()
-	{
-		OreDictionary.registerOre(ore, this);
-	}
-
 }

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "mambonomine:zinc_ingot"
+		}
+	],
+	"result": 
+	{
+		"item": "mambonomine:zinc_nugget",
+		"count": 9
+	}
+}

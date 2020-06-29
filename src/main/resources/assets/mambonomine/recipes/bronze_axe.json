@@ -1,0 +1,21 @@
+{
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"II",
+		"IS",
+		" S"
+	],
+	"key": {
+		"I": {
+			"item": "mambonomine:bronze_ingot"
+		},
+		"S": {
+			"type": "forge:ore_dict",
+			"ore": "stickWood"
+		}
+	},
+	"result": {
+		"item": "mambonomine:bronze_axe",
+		"count":1
+	}
+}

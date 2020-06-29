@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"NNN",
+		"NNN",
+		"NNN"
+	],
+	"key": 
+	{
+		"N": 
+		{
+			"item": "mambonomine:brass_nugget"
+		}
+	},
+	"result": 
+	{
+		"item": "mambonomine:brass_ingot",
+		"count": 1
+	}
+}

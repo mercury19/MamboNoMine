@@ -27,10 +27,10 @@ public class WorldGenOre implements IWorldGenerator {
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-//		if(true)
-//		{
-//			generateOre(BlockInit.ZINC_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 64, 2 + random.nextInt(4), 20);
-//		}
+		if(ConfigHandler.ZINC)
+		{
+			generateOre(BlockInit.ZINC_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 64, 2 + random.nextInt(4), 20);
+		}
 		
 		if(ConfigHandler.COPPER)
 		{
@@ -46,11 +46,11 @@ public class WorldGenOre implements IWorldGenerator {
 //		{
 //			generateOre(BlockInit.SILVER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ *16, 0, 31, 1 + random.nextInt(10), 20);
 //		}
-//		
-//		if(true)
-//		{
-//			generateOre(BlockInit.ETHERIUM_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 15, 1 + random.nextInt(4), 2);
-//		}
+		
+		if(ConfigHandler.ETHERIUM)
+		{
+			generateOre(BlockInit.ETHERIUM_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 15, 2 + random.nextInt(5), 8);
+		}
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances)

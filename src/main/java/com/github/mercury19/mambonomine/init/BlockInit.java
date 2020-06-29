@@ -15,21 +15,21 @@ public class BlockInit
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	// Ores
-//	public static final Block ZINC_ORE = new MamboOre("zinc_ore", "oreZinc", 0, true);
+	public static final Block ZINC_ORE = new MamboOre("zinc_ore", "oreZinc", 0, ConfigHandler.ZINC);
 	public static final Block COPPER_ORE = new MamboOre("copper_ore", "oreCopper", 0, ConfigHandler.COPPER);
 	public static final Block TIN_ORE = new MamboOre("tin_ore", "oreTin", 0, ConfigHandler.TIN);
 //	public static final Block SILVER_ORE = new MamboOre("silver_ore", "oreSilver", 2, true);
-//	public static final Block ETHERIUM_ORE = new MamboOre("etherium_ore", "oreEtherium", 3, true);
+	public static final Block ETHERIUM_ORE = new MamboOre("etherium_ore", "oreEtherium", 3, ConfigHandler.ETHERIUM);
 	
 	
 	// Storage Block
-//	public static final Block ZINC_BLOCK = new MamboMetalBlock("zinc_block", "blockZinc", 0, true);
+	public static final Block ZINC_BLOCK = new MamboMetalBlock("zinc_block", "blockZinc", 0, ConfigHandler.ZINC);
 	public static final Block COPPER_BLOCK = new MamboMetalBlock("copper_block", "blockCopper", 0, ConfigHandler.COPPER);
 	public static final Block TIN_BLOCK = new MamboMetalBlock("tin_block", "blockTin", 0, ConfigHandler.TIN);
 //	public static final Block SILVER_BLOCK = new MamboMetalBlock("silver_block", "blockSilver", 2, true);
 //	public static final Block ETHERIUM_BLOCK = new MamboMetalBlock("etherium_block", "blockEtherium", 3, true);
-//	
-//	public static final Block BRASS_BLOCK = new MamboMetalBlock("brass_block", "blockBrass", 0, true);
+	
+	public static final Block BRASS_BLOCK = new MamboMetalBlock("brass_block", "blockBrass", 0, ConfigHandler.BRASS);
 	public static final Block BRONZE_BLOCK = new MamboMetalBlock("bronze_block", "blockBronze", 1, ConfigHandler.BRONZE);
 	public static final Block STEEL_BLOCK = new MamboMetalBlock("steel_block", "blockSteel", 2, ConfigHandler.STEEL);
 	

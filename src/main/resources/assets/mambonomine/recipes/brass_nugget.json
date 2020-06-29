@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "mambonomine:brass_ingot"
+		}
+	],
+	"result": 
+	{
+		"item": "mambonomine:brass_nugget",
+		"count": 9
+	}
+}
