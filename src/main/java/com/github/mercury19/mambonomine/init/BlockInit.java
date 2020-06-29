@@ -12,23 +12,23 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class BlockInit 
 {
 	// Ores
-	public static MamboOre ZINC_ORE = new MamboOre("zinc_ore", "oreZince", 0);
-//	public static MamboOre COPPER_ORE;
-//	public static MamboOre TIN_ORE;
+	public static MamboOre ZINC_ORE = new MamboOre("zinc_ore", "oreZince", 1);
+	public static MamboOre COPPER_ORE = new MamboOre("copper_ore", "oreCopper", 1);
+	public static MamboOre TIN_ORE = new MamboOre("tin_ore", "oreTin", 1);
 //	public static final Block SILVER_ORE = new MamboOre("silver_ore", "oreSilver", 2);
 	public static MamboOre ETHERIUM_ORE = new MamboOre("etherium_ore", "oreEtherium", 3);
 	
 	
 	// Storage Block
-	public static MamboMetalBlock ZINC_BLOCK = new MamboMetalBlock("zinc_block", "blockZinc", 0);
-//	public static MamboMetalBlock COPPER_BLOCK;
-//	public static MamboMetalBlock TIN_BLOCK;
+	public static MamboMetalBlock ZINC_BLOCK = new MamboMetalBlock("zinc_block", "blockZinc", 1);
+	public static MamboMetalBlock COPPER_BLOCK = new MamboMetalBlock("copper_block", "blockCopper", 1);
+	public static MamboMetalBlock TIN_BLOCK = new MamboMetalBlock("tin_block", "blockTin", 1);
 //	public static final Block SILVER_BLOCK = new MamboMetalBlock("silver_block", "blockSilver", 2, true);
 //	public static final Block ETHERIUM_BLOCK = new MamboMetalBlock("etherium_block", "blockEtherium", 3, true);
 	
-//	public static MamboMetalBlock BRASS_BLOCK;
-//	public static MamboMetalBlock BRONZE_BLOCK;
-//	public static MamboMetalBlock STEEL_BLOCK;
+	public static MamboMetalBlock BRASS_BLOCK = new MamboMetalBlock("brass_block", "blockBrass", 1);
+	public static MamboMetalBlock BRONZE_BLOCK = new MamboMetalBlock("bronze_block", "blockBronze", 1);
+	public static MamboMetalBlock STEEL_BLOCK = new MamboMetalBlock("steel_block", "blockSteel", 2);
 	
 //	public static final Block ASTRAL_SILVER_BLOCK = new MamboMetalBlock("astral_silver_block", "blockAstralSilver", 3, true);
 //	public static final Block CELESTIAL_BRONZE_BLOCK = new MamboMetalBlock("celestial_bronze_block", "blockCelestialBronze", 3, true);
@@ -40,9 +40,17 @@ public class BlockInit
 	{
 		registry.registerAll(
 				ZINC_ORE,
+				COPPER_ORE,
+				TIN_ORE,
 				ETHERIUM_ORE,
 				
-				ZINC_BLOCK
+				ZINC_BLOCK,
+				COPPER_BLOCK,
+				TIN_BLOCK,
+				
+				BRASS_BLOCK,
+				BRONZE_BLOCK,
+				STEEL_BLOCK
 				);
 	}
 	
@@ -50,18 +58,34 @@ public class BlockInit
 	{
 		registry.registerAll(
 				ZINC_ORE.createItemBlock(),
+				COPPER_ORE.createItemBlock(),
+				TIN_ORE.createItemBlock(),
 				ETHERIUM_ORE.createItemBlock(),
 				
-				ZINC_BLOCK.createItemBlock()
+				ZINC_BLOCK.createItemBlock(),
+				COPPER_BLOCK.createItemBlock(),
+				TIN_BLOCK.createItemBlock(),
+				
+				BRASS_BLOCK.createItemBlock(),
+				BRONZE_BLOCK.createItemBlock(),
+				STEEL_BLOCK.createItemBlock()
 				);
 	}
 	
 	public static void registerModels()
 	{
 		ZINC_ORE.registerItemModel(Item.getItemFromBlock(ZINC_ORE));
+		COPPER_ORE.registerItemModel(Item.getItemFromBlock(COPPER_ORE));
+		TIN_ORE.registerItemModel(Item.getItemFromBlock(TIN_ORE));
 		ETHERIUM_ORE.registerItemModel(Item.getItemFromBlock(ETHERIUM_ORE));
 		
 		ZINC_BLOCK.registerItemModel(Item.getItemFromBlock(ZINC_BLOCK));
+		COPPER_BLOCK.registerItemModel(Item.getItemFromBlock(COPPER_BLOCK));
+		TIN_BLOCK.registerItemModel(Item.getItemFromBlock(TIN_BLOCK));
+		
+		BRASS_BLOCK.registerItemModel(Item.getItemFromBlock(BRASS_BLOCK));
+		BRONZE_BLOCK.registerItemModel(Item.getItemFromBlock(BRONZE_BLOCK));
+		STEEL_BLOCK.registerItemModel(Item.getItemFromBlock(STEEL_BLOCK));
 	}
 
 }

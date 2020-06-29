@@ -9,12 +9,12 @@
 	{
 		"I": 
 		{
-			"item": "mambonomine:zinc_ingot"
+			"item": "mambonomine:brass_ingot"
 		}
 	},
 	"result": 
 	{
-		"item": "mambonomine:zinc_block",
+		"item": "mambonomine:brass_block",
 		"count": 1
 	}
 }

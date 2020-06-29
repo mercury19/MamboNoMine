@@ -8,7 +8,7 @@ import net.minecraft.item.ItemArmor;
 public class MamboArmor extends ItemArmor
 {
 
-	public MamboArmor(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn, boolean enabled) 
+	public MamboArmor(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) 
 	{
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		setTranslationKey(MamboNoMine.MODID + "." + name);

@@ -6,13 +6,22 @@ import net.minecraft.item.ItemHoe;
 
 public class MamboHoe extends ItemHoe
 {
+	private String name;
 
-	public MamboHoe(String name, ToolMaterial material, boolean enabled) 
+	public MamboHoe(String name, ToolMaterial material) 
 	{
 		super(material);
+		
+		this.name = name;
+		
 		setTranslationKey(MamboNoMine.MODID + "." + name);
 		setRegistryName(name);
 		setCreativeTab(MamboNoMine.creativeTab);
+	}
+	
+	public void registerItemModel()
+	{
+		MamboNoMine.proxy.registerItemRenderer(this, 0, name);
 	}
 
 }
