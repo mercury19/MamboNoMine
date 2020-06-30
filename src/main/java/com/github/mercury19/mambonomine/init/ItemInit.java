@@ -1,6 +1,7 @@
 package com.github.mercury19.mambonomine.init;
 
 import com.github.mercury19.mambonomine.MamboNoMine;
+import com.github.mercury19.mambonomine.config.Config;
 import com.github.mercury19.mambonomine.items.MamboItem;
 import com.github.mercury19.mambonomine.items.MamboMetal;
 import com.github.mercury19.mambonomine.items.tools.MamboAxe;
@@ -79,8 +80,6 @@ public class ItemInit
 				BRASS_NUGGET,
 				BRONZE_INGOT,
 				BRONZE_NUGGET,
-				STEEL_INGOT,
-				STEEL_NUGGET,
 				
 				COPPER_AXE,
 				COPPER_HOE,
@@ -92,14 +91,20 @@ public class ItemInit
 				BRONZE_HOE,
 				BRONZE_PICKAXE,
 				BRONZE_SHOVEL,
-				BRONZE_SWORD,
-				
-				STEEL_AXE,
-				STEEL_HOE,
-				STEEL_PICKAXE,
-				STEEL_SHOVEL,
-				STEEL_SWORD
+				BRONZE_SWORD
 				);
+		if (Config.enableSteel)
+		{
+			registry.registerAll(
+					STEEL_INGOT,
+					STEEL_NUGGET,
+					STEEL_AXE,
+					STEEL_HOE,
+					STEEL_PICKAXE,
+					STEEL_SHOVEL,
+					STEEL_SWORD
+					);
+		}
 	}
 	
 	public static void registerModels()
@@ -116,8 +121,13 @@ public class ItemInit
 		BRASS_NUGGET.registerItemModel();
 		BRONZE_INGOT.registerItemModel();
 		BRONZE_NUGGET.registerItemModel();
-		STEEL_INGOT.registerItemModel();
-		STEEL_NUGGET.registerItemModel();
+		
+		
+		if (Config.enableSteel) 
+		{
+			STEEL_INGOT.registerItemModel();
+			STEEL_NUGGET.registerItemModel();
+		}
 		
 		COPPER_AXE.registerItemModel();
 		COPPER_HOE.registerItemModel();
@@ -131,11 +141,14 @@ public class ItemInit
 		BRONZE_SHOVEL.registerItemModel();
 		BRONZE_SWORD.registerItemModel();
 		
-		STEEL_AXE.registerItemModel();
-		STEEL_HOE.registerItemModel();
-		STEEL_PICKAXE.registerItemModel();
-		STEEL_SHOVEL.registerItemModel();
-		STEEL_SWORD.registerItemModel();
+		if (Config.enableSteel) 
+		{
+			STEEL_AXE.registerItemModel();
+			STEEL_HOE.registerItemModel();
+			STEEL_PICKAXE.registerItemModel();
+			STEEL_SHOVEL.registerItemModel();
+			STEEL_SWORD.registerItemModel();
+		}
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.github.mercury19.mambonomine.recipe;
 
+import com.github.mercury19.mambonomine.config.Config;
 import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
 
@@ -22,7 +23,6 @@ public class MamboRecipes
 		BlockInit.TIN_BLOCK.initOreDict();
 		BlockInit.BRASS_BLOCK.initOreDict();
 		BlockInit.BRONZE_BLOCK.initOreDict();
-		BlockInit.STEEL_BLOCK.initOreDict();
 		
 		// Ore Dict Init Ingots
 		ItemInit.ZINC_INGOT.initOreDict();
@@ -30,7 +30,6 @@ public class MamboRecipes
 		ItemInit.TIN_INGOT.initOreDict();
 		ItemInit.BRASS_INGOT.initOreDict();
 		ItemInit.BRONZE_INGOT.initOreDict();
-		ItemInit.STEEL_INGOT.initOreDict();
 		
 		// Ore Dict Init Nuggets
 		ItemInit.ZINC_NUGGET.initOreDict();
@@ -38,7 +37,14 @@ public class MamboRecipes
 		ItemInit.TIN_NUGGET.initOreDict();
 		ItemInit.BRASS_NUGGET.initOreDict();
 		ItemInit.BRONZE_NUGGET.initOreDict();
-		ItemInit.STEEL_NUGGET.initOreDict();
+		
+		// Ore Dict Init Steel
+		if (Config.enableSteel)
+		{
+			BlockInit.STEEL_BLOCK.initOreDict();
+			ItemInit.STEEL_INGOT.initOreDict();
+			ItemInit.STEEL_NUGGET.initOreDict();
+		}
 		
 		// Smelting Recipes
 		GameRegistry.addSmelting(BlockInit.ZINC_ORE, new ItemStack(ItemInit.ZINC_INGOT), 0.3f);

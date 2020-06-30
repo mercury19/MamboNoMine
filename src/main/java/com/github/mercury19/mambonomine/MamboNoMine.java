@@ -1,6 +1,7 @@
 package com.github.mercury19.mambonomine;
 
 import com.github.mercury19.mambonomine.client.MamboTab;
+import com.github.mercury19.mambonomine.config.Config;
 import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
 import com.github.mercury19.mambonomine.proxy.CommonProxy;
@@ -21,12 +22,13 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;;
 
-@Mod(modid = MamboNoMine.MODID, name = MamboNoMine.MODNAME, version = MamboNoMine.MODVERSION, dependencies = "required-after:forge@[11.16.0.1865,)", useMetadata = true)
+@Mod(modid = MamboNoMine.MODID, name = MamboNoMine.MODNAME, version = MamboNoMine.MODVERSION, dependencies = "required-after:forge@[11.16.0.1865,)", useMetadata = true, guiFactory = MamboNoMine.GUIFACTORY)
 public class MamboNoMine 
 {
 	public static final String MODID = "mambonomine";
 	public static final String MODNAME = "Mambo No. Mine";
 	public static final String MODVERSION = "0.1.0";
+	public static final String GUIFACTORY = "com.github.mercury19.mambonomine.config.MamboGuiFactory";
 	
 	@Mod.Instance(MODID)
 	public static MamboNoMine instance;
@@ -91,6 +93,8 @@ public class MamboNoMine
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		Config.preInit();
+		Config.clientPreinit();
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 3);
 	}
 	

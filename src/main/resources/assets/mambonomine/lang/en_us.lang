@@ -44,3 +44,7 @@ tile.mambonomine.etherium_ore.name=Etherium Ore
 
 // Tabs
 itemGroup.mambonomine=Mambo No. Mine
+
+// Config Stuff
+gui.config.mainTitle=Mambo No. Mine
+gui.config.enableSteel=Steel
