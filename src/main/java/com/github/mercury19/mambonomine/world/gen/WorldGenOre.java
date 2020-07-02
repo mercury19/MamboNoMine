@@ -2,6 +2,7 @@ package com.github.mercury19.mambonomine.world.gen;
 
 import java.util.Random;
 
+import com.github.mercury19.mambonomine.config.Config;
 import com.github.mercury19.mambonomine.init.BlockInit;
 
 import net.minecraft.block.state.IBlockState;
@@ -27,10 +28,21 @@ public class WorldGenOre implements IWorldGenerator {
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
 
-		generateOre(BlockInit.ZINC_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 64, 2 + random.nextInt(4), 20);
-		generateOre(BlockInit.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 72, 4 + random.nextInt(4), 20);
-		generateOre(BlockInit.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 56, 3 + random.nextInt(4), 20);
-//		generateOre(BlockInit.SILVER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ *16, 0, 31, 1 + random.nextInt(10), 20);
+		if (Config.enableZinc) 
+		{
+			generateOre(BlockInit.ZINC_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 64, 2 + random.nextInt(4), 20);
+		}
+		
+		if (Config.enableCopper) 
+		{
+			generateOre(BlockInit.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 72, 4 + random.nextInt(4), 20);
+		}
+		
+		if (Config.enableTin) 
+		{
+			generateOre(BlockInit.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 56, 3 + random.nextInt(4), 20);
+		}
+		//		generateOre(BlockInit.SILVER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ *16, 0, 31, 1 + random.nextInt(10), 20);
 		generateOre(BlockInit.ETHERIUM_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 0, 15, 2 + random.nextInt(5), 8);
 
 	}

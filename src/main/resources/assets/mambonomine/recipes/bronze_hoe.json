@@ -16,6 +16,13 @@
 	},
 	"result": {
 		"item": "mambonomine:bronze_hoe",
-		"count":1
-	}
+		"count": 1
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "bronze"
+		}
+	]
 }

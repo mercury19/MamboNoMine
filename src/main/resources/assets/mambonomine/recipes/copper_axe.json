@@ -17,5 +17,12 @@
 	"result": {
 		"item": "mambonomine:copper_axe",
 		"count":1
-	}
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "copper"
+		}
+	]
 }

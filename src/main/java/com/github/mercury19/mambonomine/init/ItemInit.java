@@ -43,7 +43,7 @@ public class ItemInit
 //	public static MamboMetal CELESTIAL_BRONZE = new MamboMetal("celestial_bronze", TOOL_CBRONZE, ARMOR_CBRONZE true);
 //	public static MamboMetal IMPERIAL_GOLD = new MamboMetal("imperial_gold", TOOL_IGOLD, ARMOR_IGOLD, true);
 //	public static MamboMetal STYGIAN_IRON = new MamboMetal("stygian_iron", TOOL_SIRON, ARMOR_SIRON, true);
-//	public static MamboMetal VOID_STEEL = new MamboMetal("void_steel", TOOL_VSTEEL, ARMOR_VSTEEL, true);
+//	public static MamboMetal FULGURITE_INGOT = new MamboMetal("fulgurite_ingot" "ingotFulgurite");
 	
 	
 	// Tool Sets
@@ -67,32 +67,58 @@ public class ItemInit
 	
 	public static void register(IForgeRegistry<Item> registry)
 	{
-		registry.registerAll(
-				ETHERIUM,
-				
-				ZINC_INGOT,
-				ZINC_NUGGET,
-				COPPER_INGOT,
-				COPPER_NUGGET,
-				TIN_INGOT,
-				TIN_NUGGET,
-				BRASS_INGOT,
-				BRASS_NUGGET,
-				BRONZE_INGOT,
-				BRONZE_NUGGET,
-				
-				COPPER_AXE,
-				COPPER_HOE,
-				COPPER_PICKAXE,
-				COPPER_SHOVEL,
-				COPPER_SWORD,
-				
-				BRONZE_AXE,
-				BRONZE_HOE,
-				BRONZE_PICKAXE,
-				BRONZE_SHOVEL,
-				BRONZE_SWORD
-				);
+		registry.register(ETHERIUM);
+		
+		if (Config.enableZinc)
+		{
+			registry.registerAll(
+					ZINC_INGOT,
+					ZINC_NUGGET
+					);
+		}
+		
+		if (Config.enableCopper)
+		{
+			registry.registerAll(
+					COPPER_INGOT,
+					COPPER_NUGGET,
+					COPPER_AXE,
+					COPPER_HOE,
+					COPPER_PICKAXE,
+					COPPER_SHOVEL,
+					COPPER_SWORD
+					);
+		}
+		
+		if (Config.enableTin)
+		{
+			registry.registerAll(
+					TIN_INGOT,
+					TIN_NUGGET
+					);
+		}
+		
+		if (Config.enableBrass)
+		{
+			registry.registerAll(		
+					BRASS_INGOT,
+					BRASS_NUGGET
+					);
+		}
+		
+		if (Config.enableBronze)
+		{
+			registry.registerAll(
+					BRONZE_INGOT,
+					BRONZE_NUGGET,
+					BRONZE_AXE,
+					BRONZE_HOE,
+					BRONZE_PICKAXE,
+					BRONZE_SHOVEL,
+					BRONZE_SWORD
+					);
+		}
+		
 		if (Config.enableSteel)
 		{
 			registry.registerAll(
@@ -109,12 +135,10 @@ public class ItemInit
 	
 	public static void registerModels()
 	{
+		// Alloy Items
 		ETHERIUM.registerItemModel();
 		
-		ZINC_INGOT.registerItemModel();
-		ZINC_NUGGET.registerItemModel();
-		COPPER_INGOT.registerItemModel();
-		COPPER_NUGGET.registerItemModel();
+		// Metal Base Items
 		TIN_INGOT.registerItemModel();
 		TIN_NUGGET.registerItemModel();
 		BRASS_INGOT.registerItemModel();
@@ -122,6 +146,17 @@ public class ItemInit
 		BRONZE_INGOT.registerItemModel();
 		BRONZE_NUGGET.registerItemModel();
 		
+		if (Config.enableZinc)
+		{
+			ZINC_INGOT.registerItemModel();
+			ZINC_NUGGET.registerItemModel();
+		}
+		
+		if (Config.enableCopper)
+		{
+			COPPER_INGOT.registerItemModel();
+			COPPER_NUGGET.registerItemModel();
+		}
 		
 		if (Config.enableSteel) 
 		{
@@ -129,11 +164,17 @@ public class ItemInit
 			STEEL_NUGGET.registerItemModel();
 		}
 		
-		COPPER_AXE.registerItemModel();
-		COPPER_HOE.registerItemModel();
-		COPPER_PICKAXE.registerItemModel();
-		COPPER_SHOVEL.registerItemModel();
-		COPPER_SWORD.registerItemModel();
+		
+		// Tool Sets
+		
+		if (Config.enableCopper) 
+		{
+			COPPER_AXE.registerItemModel();
+			COPPER_HOE.registerItemModel();
+			COPPER_PICKAXE.registerItemModel();
+			COPPER_SHOVEL.registerItemModel();
+			COPPER_SWORD.registerItemModel();
+		}
 		
 		BRONZE_AXE.registerItemModel();
 		BRONZE_HOE.registerItemModel();

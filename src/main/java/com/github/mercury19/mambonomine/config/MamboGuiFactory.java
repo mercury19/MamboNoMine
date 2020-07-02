@@ -104,5 +104,29 @@ public class MamboGuiFactory implements IModGuiFactory
 						windowTitle);
 			}
 		}
+		
+		public static class CategoryEntryWorld extends CategoryEntry
+		{
+			public CategoryEntryWorld(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
+			{
+				super(owningScreen, owningEntryList, prop);
+			}
+			
+			@Override
+			protected GuiScreen buildChildScreen()
+			{
+				Configuration configuration = Config.getConfig();
+				ConfigElement cat_metals = new ConfigElement(configuration.getCategory(Config.CATEGORY_NAME_WORLG_GEN));
+				List<IConfigElement> propertiesOnThisScreen = cat_metals.getChildElements();
+				String windowTitle = configuration.toString();
+				
+				return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
+						this.owningScreen.modID,
+						Config.CATEGORY_NAME_WORLG_GEN,
+						this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
+						this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart, 
+						windowTitle);
+			}
+		}
 	}
 }

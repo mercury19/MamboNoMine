@@ -9,5 +9,12 @@
 	{
 		"item": "mambonomine:tin_ingot",
 		"count": 9
-	}
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "tin"
+		}
+	]
 }

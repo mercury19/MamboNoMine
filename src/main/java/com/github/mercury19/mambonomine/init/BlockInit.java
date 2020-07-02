@@ -34,45 +34,73 @@ public class BlockInit
 //	public static MamboMetalBlock CELESTIAL_BRONZE_BLOCK = new MamboMetalBlock("celestial_bronze_block", "blockCelestialBronze", 3);
 //	public static MamboMetalBlock IMPERIAL_GOLD_BLOCK = new MamboMetalBlock("imperial_gold_block", "blockImperialGold", 3);
 //	public static MamboMetalBlock STYGIAN_IRON_BLOCK = new MamboMetalBlock("stygian_iron_block", "blockStygianIron", 3);
-//	public static MamboMetalBlock VOID_STEEL_BLOCK = new MamboMetalBlock("void_steel_steel", "blockVoidSteel", 3);
+	public static MamboMetalBlock FULGURITE_BLOCK = new MamboMetalBlock("void_steel_steel", "blockFulgurite", 3);
 	
 	public static void register(IForgeRegistry<Block> registry)
 	{
-		registry.registerAll(
-				ZINC_ORE,
-				COPPER_ORE,
-				TIN_ORE,
-				ETHERIUM_ORE,
-				
-				ZINC_BLOCK,
-				COPPER_BLOCK,
-				TIN_BLOCK,
-				
-				BRASS_BLOCK,
-				BRONZE_BLOCK
-				);
+		registry.register(ETHERIUM_ORE);
+		
+		if (Config.enableZinc)
+		{
+			registry.registerAll(ZINC_ORE, ZINC_BLOCK);
+		}
+		
+		if (Config.enableCopper)
+		{
+			registry.registerAll(COPPER_ORE, COPPER_BLOCK);
+		}
+		
+		if (Config.enableTin)
+		{
+			registry.registerAll(TIN_ORE, TIN_BLOCK);
+		}
+		
+		if (Config.enableBrass)
+		{
+			registry.register(BRASS_BLOCK);
+		}
+		
+		if (Config.enableBronze)
+		{
+			registry.register(BRONZE_BLOCK);
+		}
 		
 		if (Config.enableSteel)
 		{
 			registry.register(STEEL_BLOCK);
 		}
+		
+		
 	}
 	
 	public static void registerItemBlocks(IForgeRegistry<Item> registry)
 	{
-		registry.registerAll(
-				ZINC_ORE.createItemBlock(),
-				COPPER_ORE.createItemBlock(),
-				TIN_ORE.createItemBlock(),
-				ETHERIUM_ORE.createItemBlock(),
-				
-				ZINC_BLOCK.createItemBlock(),
-				COPPER_BLOCK.createItemBlock(),
-				TIN_BLOCK.createItemBlock(),
-				
-				BRASS_BLOCK.createItemBlock(),
-				BRONZE_BLOCK.createItemBlock()
-				);
+		registry.register(ETHERIUM_ORE.createItemBlock());
+		
+		if (Config.enableZinc)
+		{
+			registry.registerAll(ZINC_ORE.createItemBlock(), ZINC_BLOCK.createItemBlock());
+		}
+		
+		if (Config.enableCopper)
+		{
+			registry.registerAll(COPPER_ORE.createItemBlock(), COPPER_BLOCK.createItemBlock());
+		}
+		
+		if (Config.enableTin)
+		{
+			registry.registerAll(TIN_ORE.createItemBlock(), TIN_BLOCK.createItemBlock());
+		}
+		
+		if (Config.enableBrass)
+		{
+			registry.register(BRASS_BLOCK.createItemBlock());
+		}
+		
+		if (Config.enableBronze)
+		{
+			registry.register(BRONZE_BLOCK.createItemBlock());
+		}
 		
 		if (Config.enableSteel)
 		{
@@ -82,18 +110,35 @@ public class BlockInit
 	
 	public static void registerModels()
 	{
-		ZINC_ORE.registerItemModel(Item.getItemFromBlock(ZINC_ORE));
-		COPPER_ORE.registerItemModel(Item.getItemFromBlock(COPPER_ORE));
-		TIN_ORE.registerItemModel(Item.getItemFromBlock(TIN_ORE));
 		ETHERIUM_ORE.registerItemModel(Item.getItemFromBlock(ETHERIUM_ORE));
 		
-		ZINC_BLOCK.registerItemModel(Item.getItemFromBlock(ZINC_BLOCK));
-		COPPER_BLOCK.registerItemModel(Item.getItemFromBlock(COPPER_BLOCK));
-		TIN_BLOCK.registerItemModel(Item.getItemFromBlock(TIN_BLOCK));
+		if (Config.enableZinc)
+		{
+			ZINC_ORE.registerItemModel(Item.getItemFromBlock(ZINC_ORE));
+			ZINC_BLOCK.registerItemModel(Item.getItemFromBlock(ZINC_BLOCK));
+		}
 		
-		BRASS_BLOCK.registerItemModel(Item.getItemFromBlock(BRASS_BLOCK));
-		BRONZE_BLOCK.registerItemModel(Item.getItemFromBlock(BRONZE_BLOCK));
+		if (Config.enableCopper)
+		{
+			COPPER_ORE.registerItemModel(Item.getItemFromBlock(COPPER_ORE));	
+			COPPER_BLOCK.registerItemModel(Item.getItemFromBlock(COPPER_BLOCK));			
+		}
 		
+		if (Config.enableTin)
+		{
+			TIN_ORE.registerItemModel(Item.getItemFromBlock(TIN_ORE));
+			TIN_BLOCK.registerItemModel(Item.getItemFromBlock(TIN_BLOCK));
+		}
+		
+		if (Config.enableBrass)
+		{
+			BRASS_BLOCK.registerItemModel(Item.getItemFromBlock(BRASS_BLOCK));
+		}
+		
+		if (Config.enableBronze)
+		{
+			BRONZE_BLOCK.registerItemModel(Item.getItemFromBlock(BRONZE_BLOCK));			
+		}
 		
 		if (Config.enableSteel) 
 		{

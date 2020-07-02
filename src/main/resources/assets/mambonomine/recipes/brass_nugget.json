@@ -9,5 +9,12 @@
 	{
 		"item": "mambonomine:brass_nugget",
 		"count": 9
-	}
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "brass"
+		}
+	]
 }

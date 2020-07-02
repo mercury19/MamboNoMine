@@ -2,10 +2,10 @@ package com.github.mercury19.mambonomine;
 
 import com.github.mercury19.mambonomine.client.MamboTab;
 import com.github.mercury19.mambonomine.config.Config;
+import com.github.mercury19.mambonomine.crafting.MamboRecipes;
 import com.github.mercury19.mambonomine.init.BlockInit;
 import com.github.mercury19.mambonomine.init.ItemInit;
 import com.github.mercury19.mambonomine.proxy.CommonProxy;
-import com.github.mercury19.mambonomine.recipe.MamboRecipes;
 import com.github.mercury19.mambonomine.world.gen.WorldGenOre;
 
 import net.minecraft.block.Block;
@@ -49,7 +49,7 @@ public class MamboNoMine
 //	public static final ToolMaterial TOOL_CBRONZE = EnumHelper.addToolMaterial("CELESTIAL_BRONZE", 3, 1864, 9.0F, 4.0F, 24);
 //	public static final ToolMaterial TOOL_IGOLD = EnumHelper.addToolMaterial("IMPERIAL_GOLD", 3, 1864, 9.0F, 4.0F, 24);
 //	public static final ToolMaterial TOOL_SIRON = EnumHelper.addToolMaterial("STYGIAN_IRON", 3, 1864, 9.0F, 4.0F, 24);
-//	public static final ToolMaterial TOOL_VSTEEL = EnumHelper.addToolMaterial("VOID_STEEL", 3, 1864, 9.0F, 4.0F, 24);
+	public static final ToolMaterial TOOL_FULGURITE = EnumHelper.addToolMaterial("FULGURITE", 3, 1864, 9.0F, 4.0F, 24);
 //	
 //	
 //	// Armor Materials

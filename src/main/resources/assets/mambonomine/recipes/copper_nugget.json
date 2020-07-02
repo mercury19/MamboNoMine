@@ -9,5 +9,12 @@
 	{
 		"item": "mambonomine:copper_nugget",
 		"count": 9
-	}
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "copper"
+		}
+	]
 }

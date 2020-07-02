@@ -1,0 +1,6 @@
+{
+	"conditions": 
+	{
+		"metal_enabled" : "com.github.mercury19.mambonomine.crafting.conditions.MetalConditionFactory"
+	}
+}

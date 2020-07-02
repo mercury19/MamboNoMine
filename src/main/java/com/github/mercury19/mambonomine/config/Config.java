@@ -16,10 +16,22 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class Config 
 {
+	public static boolean enableEtherium;
+	
+	public static boolean enableZinc;
+	public static boolean enableCopper;
+	public static boolean enableTin;
+	public static boolean enableSilver;
+	
+	public static boolean enableBrass;
+	public static boolean enableBronze;
 	public static boolean enableSteel;
 	
-	public static final String CATEGORY_NAME_METALS = "category_metal";
+	public static boolean enableFulgurite;
+	
+	public static final String CATEGORY_NAME_METALS = "category_metals";
 	public static final String CATEGORY_NAME_STATS = "category_stats";
+	public static final String CATEGORY_NAME_WORLG_GEN = "category_world_gen";
 	
 	public static void preInit()
 	{
@@ -60,20 +72,60 @@ public class Config
 			config.load();
 		}
 		
+		final boolean ZINC_DEFAULT_VALUE = true;
+		Property propZincBool = config.get(CATEGORY_NAME_METALS, "enableZinc", ZINC_DEFAULT_VALUE);
+		propZincBool.setComment("Enable/disable Zinc world generation and all items and blocks.");
+		propZincBool.setLanguageKey("gui.config.enableZinc").setRequiresMcRestart(true);
+		
+		final boolean COPPER_DEFAULT_VALUE = true;
+		Property propCopperBool = config.get(CATEGORY_NAME_METALS, "enableCopper", COPPER_DEFAULT_VALUE);
+		propCopperBool.setComment("Enable/disable Copper world generation and all items and blocks.");
+		propCopperBool.setLanguageKey("gui.config.enableCopper").setRequiresMcRestart(true);
+		
+		final boolean TIN_DEFAULT_VALUE = true;
+		Property propTinBool = config.get(CATEGORY_NAME_METALS, "enableTin", TIN_DEFAULT_VALUE);
+		propTinBool.setComment("Enable/disable Tin world generation and all items and blocks.");
+		propTinBool.setLanguageKey("gui.config.enableTin").setRequiresMcRestart(true);
+		
+		final boolean BRASS_DEFAULT_VALUE = true;
+		Property propBrassBool = config.get(CATEGORY_NAME_METALS, "enableBrass", BRASS_DEFAULT_VALUE);
+		propBrassBool.setComment("Enable/disable Brass world generation and all items and blocks.");
+		propBrassBool.setLanguageKey("gui.config.enableBrass").setRequiresMcRestart(true);
+		
+		final boolean BRONZE_DEFAULT_VALUE = true;
+		Property propBronzeBool = config.get(CATEGORY_NAME_METALS, "enableBronze", BRONZE_DEFAULT_VALUE);
+		propBronzeBool.setComment("Enable/disable Bronze world generation and all items and blocks.");
+		propBronzeBool.setLanguageKey("gui.config.enableBronze").setRequiresMcRestart(true);
+		
 		final boolean STEEL_DEFAULT_VALUE = true;
 		Property propSteelBool = config.get(CATEGORY_NAME_METALS, "enableSteel", STEEL_DEFAULT_VALUE);
 		propSteelBool.setComment("Enable/disable all Steel items and blocks.");
 		propSteelBool.setLanguageKey("gui.config.enableSteel").setRequiresMcRestart(true);
 		
 		List<String> propOrderGeneral = new ArrayList<String>();
+		propOrderGeneral.add(propZincBool.getName());
+		propOrderGeneral.add(propCopperBool.getName());
+		propOrderGeneral.add(propTinBool.getName());
+		propOrderGeneral.add(propBrassBool.getName());
+		propOrderGeneral.add(propBronzeBool.getName());
 		propOrderGeneral.add(propSteelBool.getName());
 		config.setCategoryPropertyOrder(CATEGORY_NAME_METALS, propOrderGeneral);
 		
 		if (readFieldsFromConfig)
 		{
+			enableZinc = propZincBool.getBoolean(ZINC_DEFAULT_VALUE);
+			enableCopper = propCopperBool.getBoolean(COPPER_DEFAULT_VALUE);
+			enableTin = propTinBool.getBoolean(TIN_DEFAULT_VALUE);
+			enableBrass = propBrassBool.getBoolean(BRASS_DEFAULT_VALUE);
+			enableBronze = propBronzeBool.getBoolean(BRONZE_DEFAULT_VALUE);
 			enableSteel = propSteelBool.getBoolean(STEEL_DEFAULT_VALUE);
 		}
 		
+		propZincBool.set(enableZinc);
+		propCopperBool.set(enableCopper);
+		propTinBool.set(enableTin);
+		propBrassBool.set(enableBrass);
+		propBronzeBool.set(enableBronze);
 		propSteelBool.set(enableSteel);
 		
 		if (config.hasChanged())

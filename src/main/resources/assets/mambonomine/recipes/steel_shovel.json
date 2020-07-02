@@ -16,6 +16,13 @@
 	},
 	"result": {
 		"item": "mambonomine:steel_shovel",
-		"count":1
-	}
+		"count": 1
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "steel"
+		}
+	]
 }
