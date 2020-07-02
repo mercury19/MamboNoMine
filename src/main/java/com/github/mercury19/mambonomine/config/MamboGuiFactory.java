@@ -53,7 +53,7 @@ public class MamboGuiFactory implements IModGuiFactory
 		{
 			List<IConfigElement> list = new ArrayList<IConfigElement>();
 			list.add(new DummyCategoryElement("Metals", "gui.config.ctgy.metals", CategoryEntryMetals.class));
-			list.add(new DummyCategoryElement("Stats", "gui.config.ctgy.stats", CategoryEntryStats.class));
+//			list.add(new DummyCategoryElement("World Gen", "gui.config.ctgy.stats", CategoryEntryWorld.class));
 			return list;
 		}
 		
@@ -81,30 +81,6 @@ public class MamboGuiFactory implements IModGuiFactory
 			}
 		}
 		
-		public static class CategoryEntryStats extends CategoryEntry
-		{
-			public CategoryEntryStats(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
-			{
-				super(owningScreen, owningEntryList, prop);
-			}
-			
-			@Override
-			protected GuiScreen buildChildScreen()
-			{
-				Configuration configuration = Config.getConfig();
-				ConfigElement cat_metals = new ConfigElement(configuration.getCategory(Config.CATEGORY_NAME_STATS));
-				List<IConfigElement> propertiesOnThisScreen = cat_metals.getChildElements();
-				String windowTitle = configuration.toString();
-				
-				return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
-						this.owningScreen.modID,
-						Config.CATEGORY_NAME_STATS,
-						this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
-						this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart, 
-						windowTitle);
-			}
-		}
-		
 		public static class CategoryEntryWorld extends CategoryEntry
 		{
 			public CategoryEntryWorld(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
@@ -116,13 +92,13 @@ public class MamboGuiFactory implements IModGuiFactory
 			protected GuiScreen buildChildScreen()
 			{
 				Configuration configuration = Config.getConfig();
-				ConfigElement cat_metals = new ConfigElement(configuration.getCategory(Config.CATEGORY_NAME_WORLG_GEN));
+				ConfigElement cat_metals = new ConfigElement(configuration.getCategory(Config.CATEGORY_NAME_WORLD_GEN));
 				List<IConfigElement> propertiesOnThisScreen = cat_metals.getChildElements();
 				String windowTitle = configuration.toString();
 				
 				return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
 						this.owningScreen.modID,
-						Config.CATEGORY_NAME_WORLG_GEN,
+						Config.CATEGORY_NAME_WORLD_GEN,
 						this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
 						this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart, 
 						windowTitle);

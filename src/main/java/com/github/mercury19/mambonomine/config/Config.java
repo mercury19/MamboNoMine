@@ -29,9 +29,18 @@ public class Config
 	
 	public static boolean enableFulgurite;
 	
+	
+	public static int zincMinY;
+	public static int zincMaxY;
+	public static int zincSize;
+	public static int zincChances;
+	
+	
+	
+	
+	
 	public static final String CATEGORY_NAME_METALS = "category_metals";
-	public static final String CATEGORY_NAME_STATS = "category_stats";
-	public static final String CATEGORY_NAME_WORLG_GEN = "category_world_gen";
+	public static final String CATEGORY_NAME_WORLD_GEN = "category_world_gen";
 	
 	public static void preInit()
 	{
@@ -72,6 +81,8 @@ public class Config
 			config.load();
 		}
 		
+		
+		// Metal Enabling
 		final boolean ZINC_DEFAULT_VALUE = true;
 		Property propZincBool = config.get(CATEGORY_NAME_METALS, "enableZinc", ZINC_DEFAULT_VALUE);
 		propZincBool.setComment("Enable/disable Zinc world generation and all items and blocks.");
@@ -145,7 +156,7 @@ public class Config
 		{
 			if (MamboNoMine.MODID.equals(event.getModID()) && !event.isWorldRunning())
 			{
-				if (event.getConfigID().equals(CATEGORY_NAME_METALS) || event.getConfigID().equals(CATEGORY_NAME_STATS))
+				if (event.getConfigID().equals(CATEGORY_NAME_METALS) || event.getConfigID().equals(CATEGORY_NAME_WORLD_GEN))
 				{
 					syncFromGUI();
 				}

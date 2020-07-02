@@ -30,6 +30,20 @@ item.mambonomine.steel_pickaxe.name=Steel Pickaxe
 item.mambonomine.steel_shovel.name=Steel Shovel
 item.mambonomine.steel_sword.name=Steel Sword
 
+// Armor
+item.mambonomine.copper_helmet.name=Copper Helmet
+item.mambonomine.copper_chestplate.name=Copper Chestplate
+item.mambonomine.copper_leggings.name=Copper Leggings
+item.mambonomine.copper_boots.name=Copper Boots
+item.mambonomine.bronze_helmet.name=Bronze Helmet
+item.mambonomine.bronze_chestplate.name=Bronze Chestplate
+item.mambonomine.bronze_leggings.name=Bronze Leggings
+item.mambonomine.bronze_boots.name=Bronze Boots
+item.mambonomine.steel_helmet.name=Steel Helmet
+item.mambonomine.steel_chestplate.name=Steel Chestplate
+item.mambonomine.steel_leggings.name=Steel Leggings
+item.mambonomine.steel_boots.name=Steel Boots
+
 // Blocks
 tile.mambonomine.zinc_block.name=Zinc Block
 tile.mambonomine.zinc_ore.name=Zinc Ore
@@ -47,4 +61,9 @@ itemGroup.mambonomine=Mambo No. Mine
 
 // Config Stuff
 gui.config.mainTitle=Mambo No. Mine
+gui.config.enableZinc=Zinc
+gui.config.enableCopper=Copper
+gui.config.enableTin=Tin
+gui.config.enableBrass=Brass
+gui.config.enableBronze=Bronze
 gui.config.enableSteel=Steel
