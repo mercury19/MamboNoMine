@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"I I",
+		"I I"
+	],
+	"key": {
+		"I": {
+			"item": "mambonomine:steel_ingot"
+		},
+	},
+	"result": {
+		"item": "mambonomine:steel_boots",
+		"count": 1
+	},
+	"conditions":
+	[
+		{
+			"type": "mambonomine:metal_enabled",
+			"value" : "steel"
+		}
+	]
+}

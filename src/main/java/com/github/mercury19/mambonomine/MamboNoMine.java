@@ -9,8 +9,10 @@ import com.github.mercury19.mambonomine.proxy.CommonProxy;
 import com.github.mercury19.mambonomine.world.gen.WorldGenOre;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -50,15 +52,15 @@ public class MamboNoMine
 //	public static final ToolMaterial TOOL_IGOLD = EnumHelper.addToolMaterial("IMPERIAL_GOLD", 3, 1864, 9.0F, 4.0F, 24);
 //	public static final ToolMaterial TOOL_SIRON = EnumHelper.addToolMaterial("STYGIAN_IRON", 3, 1864, 9.0F, 4.0F, 24);
 	public static final ToolMaterial TOOL_FULGURITE = EnumHelper.addToolMaterial("FULGURITE", 3, 1864, 9.0F, 4.0F, 24);
-//	
-//	
+	
+	
 //	// Armor Materials
-//	public static final ArmorMaterial ARMOR_COPPER = EnumHelper.addArmorMaterial("COPPER", MamboNoMine.MODID + ":copper", 11, new int[] {1, 3, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ArmorMaterial ARMOR_COPPER = EnumHelper.addArmorMaterial("COPPER", MamboNoMine.MODID + ":copper", 11, new int[] {1, 3, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 //	public static final ArmorMaterial ARMOR_SILVER = EnumHelper.addArmorMaterial("SILVER", MamboNoMine.MODID + ":silver", 8, new int[] {2, 3, 5, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1);
-//	
-//	public static final ArmorMaterial ARMOR_BRONZE = EnumHelper.addArmorMaterial("BRONZE", MamboNoMine.MODID + ":bronze", 17, new int[] {2, 4, 5, 2}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-//	public static final ArmorMaterial ARMOR_STEEL = EnumHelper.addArmorMaterial("STEEL", MamboNoMine.MODID + ":steel", 21, new int[] {3, 5, 6, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0F);
-//	
+	
+	public static final ArmorMaterial ARMOR_BRONZE = EnumHelper.addArmorMaterial("BRONZE", MamboNoMine.MODID + ":bronze", 17, new int[] {2, 4, 5, 2}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	public static final ArmorMaterial ARMOR_STEEL = EnumHelper.addArmorMaterial("STEEL", MamboNoMine.MODID + ":steel", 21, new int[] {3, 5, 6, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0F);
+	
 //	public static final ArmorMaterial ARMOR_ASILVER = EnumHelper.addArmorMaterial("ASTRAL_SILVER", MamboNoMine.MODID + ":astral_silver", 37, new int[] {3,  6,  8,  3}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 //	public static final ArmorMaterial ARMOR_CBRONZE = EnumHelper.addArmorMaterial("CELESTIAL_BRONZE", MamboNoMine.MODID + ":celestial_bronze", 37, new int[] {3,  6,  8,  3}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 //	public static final ArmorMaterial ARMOR_IGOLD = EnumHelper.addArmorMaterial("IMPERIAL_GOLD", MamboNoMine.MODID + ":imperial_gold", 37, new int[] {3,  6,  8,  3}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);

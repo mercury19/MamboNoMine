@@ -2,6 +2,7 @@ package com.github.mercury19.mambonomine.init;
 
 import com.github.mercury19.mambonomine.MamboNoMine;
 import com.github.mercury19.mambonomine.config.Config;
+import com.github.mercury19.mambonomine.items.MamboArmor;
 import com.github.mercury19.mambonomine.items.MamboItem;
 import com.github.mercury19.mambonomine.items.MamboMetal;
 import com.github.mercury19.mambonomine.items.tools.MamboAxe;
@@ -10,6 +11,7 @@ import com.github.mercury19.mambonomine.items.tools.MamboPickaxe;
 import com.github.mercury19.mambonomine.items.tools.MamboShovel;
 import com.github.mercury19.mambonomine.items.tools.MamboSword;
 
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -65,6 +67,22 @@ public class ItemInit
 	public static MamboShovel STEEL_SHOVEL = new MamboShovel("steel_shovel", MamboNoMine.TOOL_STEEL);
 	public static MamboSword STEEL_SWORD = new MamboSword("steel_sword", MamboNoMine.TOOL_STEEL);
 	
+	// Armor Sets
+	public static MamboArmor COPPER_HELMET = new MamboArmor("copper_helmet", MamboNoMine.ARMOR_COPPER, 1, EntityEquipmentSlot.HEAD);
+	public static MamboArmor COPPER_CHESTPLATE = new MamboArmor("copper_chestplate", MamboNoMine.ARMOR_COPPER, 1, EntityEquipmentSlot.CHEST);
+	public static MamboArmor COPPER_LEGGINGS = new MamboArmor("copper_leggings", MamboNoMine.ARMOR_COPPER, 2, EntityEquipmentSlot.LEGS);
+	public static MamboArmor COPPER_BOOTS = new MamboArmor("copper_boots", MamboNoMine.ARMOR_COPPER, 1, EntityEquipmentSlot.FEET);
+	
+	public static MamboArmor BRONZE_HELMET = new MamboArmor("bronze_helmet", MamboNoMine.ARMOR_BRONZE, 1, EntityEquipmentSlot.HEAD);
+	public static MamboArmor BRONZE_CHESTPLATE = new MamboArmor("bronze_chestplate", MamboNoMine.ARMOR_BRONZE, 1, EntityEquipmentSlot.CHEST);
+	public static MamboArmor BRONZE_LEGGINGS = new MamboArmor("bronze_leggings", MamboNoMine.ARMOR_BRONZE, 2, EntityEquipmentSlot.LEGS);
+	public static MamboArmor BRONZE_BOOTS = new MamboArmor("bronze_boots", MamboNoMine.ARMOR_BRONZE, 1, EntityEquipmentSlot.FEET);
+	
+	public static MamboArmor STEEL_HELMET = new MamboArmor("steel_helmet", MamboNoMine.ARMOR_STEEL, 1, EntityEquipmentSlot.HEAD);
+	public static MamboArmor STEEL_CHESTPLATE = new MamboArmor("steel_chestplate", MamboNoMine.ARMOR_STEEL, 1, EntityEquipmentSlot.CHEST);
+	public static MamboArmor STEEL_LEGGINGS = new MamboArmor("steel_leggings", MamboNoMine.ARMOR_STEEL, 2, EntityEquipmentSlot.LEGS);
+	public static MamboArmor STEEL_BOOTS = new MamboArmor("steel_boots", MamboNoMine.ARMOR_STEEL, 1, EntityEquipmentSlot.FEET);
+	
 	public static void register(IForgeRegistry<Item> registry)
 	{
 		registry.register(ETHERIUM);
@@ -86,7 +104,11 @@ public class ItemInit
 					COPPER_HOE,
 					COPPER_PICKAXE,
 					COPPER_SHOVEL,
-					COPPER_SWORD
+					COPPER_SWORD,
+					COPPER_HELMET,
+					COPPER_CHESTPLATE,
+					COPPER_LEGGINGS,
+					COPPER_BOOTS
 					);
 		}
 		
@@ -115,7 +137,11 @@ public class ItemInit
 					BRONZE_HOE,
 					BRONZE_PICKAXE,
 					BRONZE_SHOVEL,
-					BRONZE_SWORD
+					BRONZE_SWORD,
+					BRONZE_HELMET,
+					BRONZE_CHESTPLATE,
+					BRONZE_LEGGINGS,
+					BRONZE_BOOTS
 					);
 		}
 		
@@ -128,7 +154,11 @@ public class ItemInit
 					STEEL_HOE,
 					STEEL_PICKAXE,
 					STEEL_SHOVEL,
-					STEEL_SWORD
+					STEEL_SWORD,
+					STEEL_HELMET,
+					STEEL_CHESTPLATE,
+					STEEL_LEGGINGS,
+					STEEL_BOOTS
 					);
 		}
 	}
@@ -139,13 +169,6 @@ public class ItemInit
 		ETHERIUM.registerItemModel();
 		
 		// Metal Base Items
-		TIN_INGOT.registerItemModel();
-		TIN_NUGGET.registerItemModel();
-		BRASS_INGOT.registerItemModel();
-		BRASS_NUGGET.registerItemModel();
-		BRONZE_INGOT.registerItemModel();
-		BRONZE_NUGGET.registerItemModel();
-		
 		if (Config.enableZinc)
 		{
 			ZINC_INGOT.registerItemModel();
@@ -156,6 +179,24 @@ public class ItemInit
 		{
 			COPPER_INGOT.registerItemModel();
 			COPPER_NUGGET.registerItemModel();
+		}
+		
+		if (Config.enableTin) 
+		{
+			TIN_INGOT.registerItemModel();
+			TIN_NUGGET.registerItemModel();
+		}
+		
+		if (Config.enableBrass) 
+		{
+			BRASS_INGOT.registerItemModel();
+			BRASS_NUGGET.registerItemModel();
+		}
+		
+		if (Config.enableBronze) 
+		{
+			BRONZE_INGOT.registerItemModel();
+			BRONZE_NUGGET.registerItemModel();
 		}
 		
 		if (Config.enableSteel) 
@@ -176,11 +217,14 @@ public class ItemInit
 			COPPER_SWORD.registerItemModel();
 		}
 		
-		BRONZE_AXE.registerItemModel();
-		BRONZE_HOE.registerItemModel();
-		BRONZE_PICKAXE.registerItemModel();
-		BRONZE_SHOVEL.registerItemModel();
-		BRONZE_SWORD.registerItemModel();
+		if (Config.enableBronze) 
+		{
+			BRONZE_AXE.registerItemModel();
+			BRONZE_HOE.registerItemModel();
+			BRONZE_PICKAXE.registerItemModel();
+			BRONZE_SHOVEL.registerItemModel();
+			BRONZE_SWORD.registerItemModel();
+		}
 		
 		if (Config.enableSteel) 
 		{
@@ -189,6 +233,33 @@ public class ItemInit
 			STEEL_PICKAXE.registerItemModel();
 			STEEL_SHOVEL.registerItemModel();
 			STEEL_SWORD.registerItemModel();
+		}
+		
+		
+		// Armor Sets
+		
+		if (Config.enableCopper)
+		{
+			COPPER_HELMET.registerItemModel();
+			COPPER_CHESTPLATE.registerItemModel();
+			COPPER_LEGGINGS.registerItemModel();
+			COPPER_BOOTS.registerItemModel();
+		}
+		
+		if (Config.enableBronze)
+		{
+			BRONZE_HELMET.registerItemModel();
+			BRONZE_CHESTPLATE.registerItemModel();
+			BRONZE_LEGGINGS.registerItemModel();
+			BRONZE_BOOTS.registerItemModel();
+		}
+		
+		if (Config.enableSteel)
+		{
+			STEEL_HELMET.registerItemModel();
+			STEEL_CHESTPLATE.registerItemModel();
+			STEEL_LEGGINGS.registerItemModel();
+			STEEL_BOOTS.registerItemModel();
 		}
 	}
 
